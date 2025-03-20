@@ -61,10 +61,11 @@ export class LinkPreviewCard extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--themeColor);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
-        border-radius: 8px;
-        padding: 10px;
+        border-radius: var(--ddd-radius-sm);
+        padding: var(--ddd-spacing-3);
         max-width: 400px;
-        border: 2px solid var(--themeColor);
+        border: var(--ddd-border-sm);
+        border-color: var(--themeColor);
       }
 
       :host(:hover) {
@@ -81,52 +82,55 @@ export class LinkPreviewCard extends DDDSuper(I18NMixin(LitElement)) {
         display: block;
         max-width: 80%;
         height: auto;
-        margin: 0px auto;
-        border-radius: 8px;
-        border: 4px solid var(--themeColor);
+        margin: var(--ddd-spacing-0) auto;
+        border-radius: var(--ddd-radius-sm);
+        border: var(--ddd-border-lg);
+        border-color: var(--themeColor);
       }
 
       .content {
-        margin-top: 12px;
-        padding: 0 10px;
+        margin-top: var(--ddd-spacing-3);
+        padding: var(--ddd-spacing-0) var(--ddd-spacing-2);
       }
       
       .title {
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin: 15px 0px;
+        font-weight: var(--ddd-font-weight-bold);
+        font-size: var(--ddd-font-size-s);
+        margin: var(--ddd-spacing-4) var(--ddd-spacing-0);
         color: var(--themeColor);
       }
 
       details {
-      border: 2px solid var(--themeColor);
-      border-radius: 8px;
+      border: var(--ddd-border-sm);
+      border-color: var(--themeColor);
+      border-radius: var(--ddd-radius-sm);
       text-align: center;
-      padding: 8px;
+      padding: var(--ddd-spacing-2);
       height: 70px;
       overflow: auto;
       }
 
       details summary {
         text-align: center;
-        font-size: 18px;
-        padding: 8px 0;
+        font-size: var(--ddd-font-size-3xs);
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-0);
       }
 
       .desc {
-        font-size: 0.9rem;
-        color: white;
-        margin: 10px 0px;
+        font-size: var(--ddd-font-size-3xs);
+        color: var(--ddd-theme-default-white);
+        margin: var(--ddd-spacing-2) var(--ddd-spacing-0);
       }
 
       .url {
         display: inline-block;
-        padding: 8px 12px;
-        margin: 8px auto 8px;
-        font-weight: bold;
-        color: #fff;
-        border: 2px solid var(--themeColor);
-        border-radius: 8px;
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-3);
+        margin: var(--ddd-spacing-2) auto;
+        font-weight: var(--ddd-font-weight-bold);
+        color: var(--ddd-theme-default-white);
+        border: var(--ddd-border-sm);
+        border-color: var(--themeColor);
+        border-radius: var(--ddd-radius-sm);
         transition: background-color 0.3s ease-in-out;
       }
 
@@ -135,10 +139,12 @@ export class LinkPreviewCard extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .loading-spinner {
-        margin: 20px auto;
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #3498db;
-        border-radius: 50%;
+        margin: var(--ddd-spacing-5) auto;
+        border: var(--ddd-border-lg);
+        border-color: var(--ddd-theme-default-white);
+        border-top: var(--ddd-border-lg);
+        border-top-color: var(--ddd-theme-default-skyBlue);
+        border-radius: var(--ddd-radius-xl);
         width: 30px;
         height: 30px;
         animation: spin 2s linear infinite;
@@ -156,7 +162,7 @@ export class LinkPreviewCard extends DDDSuper(I18NMixin(LitElement)) {
       @media (max-width: 600px) {
         :host {
           max-width: 100%;
-          padding: 10px;
+          padding: var(--ddd-spacing-3);
         }
       }
     `];
